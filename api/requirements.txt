@@ -1,0 +1,13 @@
+autopep8==1.5.7
+click==7.1.2
+fastapi==0.64.0
+greenlet==1.1.0
+h11==0.12.0
+psycopg2-binary==2.8.6
+pycodestyle==2.7.0
+pydantic==1.8.1
+SQLAlchemy==1.4.14
+starlette==0.13.6
+toml==0.10.2
+typing-extensions==3.10.0.0
+uvicorn==0.13.4

@@ -4,13 +4,15 @@ from sqlalchemy.orm import sessionmaker
 import os
 from dotenv import load_dotenv
 
-load_dotenv('../api.env')
-host = os.environ['DB_HOST']
-database = os.environ['DB_NAME']
-user = os.environ['DB_USERNAME']
-password = os.environ['DB_PASSWORD']
+load_dotenv("../api.env")
+# host = os.environ['DB_HOST']
+user = os.environ['POSTGRES_USER']
+password = os.environ['POSTGRES_PASSWORD']
+server = os.environ['POSTGRES_SERVER']
+port = os.environ['POSTGRES_PORT']
+db = os.environ['POSTGRES_DB']
 
-SQLALCHEMY_DATABASE_URL = f"postgresql://{user}:{password}@{host}/{database}"
+SQLALCHEMY_DATABASE_URL = f"postgresql://{user}:{password}@{server}:{port}/"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, pool_size=3, max_overflow=0

@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import testApiService from "./services/test.service";
 import React, { useState } from "react";
-import axios from "axios";
 function App() {
   const [input, setInput] = useState("");
   const handleSubmit = (e) => {
